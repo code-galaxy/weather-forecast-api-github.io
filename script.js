@@ -55,7 +55,7 @@ const parametr = {
 function getWeather() {
    let cityId = document.querySelector('.select-option').value;
 
-   fetch(`${parametr.url}weather?id=${cityId}&appid=ed1ea0c7bdcad398711b049b9b64a59b`)
+   fetch(`${parametr.url}weather?id=${cityId}&appid=${parametr.appid}`)
       .then(weather => {
          return weather.json();
       }).then(showWeather);
